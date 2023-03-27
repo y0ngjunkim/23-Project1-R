@@ -3,17 +3,16 @@
 >오늘 배운 내용 정리
 
 ### library(ggplot2)
-'''R
-ggplot(data = iris, aes(x = Petal.Length, y = Petal.width)) + goem_
-'''
+   * ggplot(data = iris, aes(x = Petal.Length, y = Petal.width)) + goem_
+
 ### cowsay
 library(cowsay)
-'''r
-say("Hello World", by="cat")
-say("Hello World", by="snow")
-'''
+
+   * say("Hello World", by="cat")
+   * say("Hello World", by="snow")
+
 ### 도움말
-?sort
+   * ?sort
 
 ### 변수명 작명 규칙
    * 첫글자는 영문자나 마침표로 시작하는데 일반적으로 영문자로 시작
