@@ -2,7 +2,8 @@
 <h2>03월 22일</h2>
 >오늘 배운 내용 정리
 
-### library(ggplot2)
+### ggplot
+   * library(ggplot2)
    * ggplot(data = iris, aes(x = Petal.Length, y = Petal.width)) + goem_
 
 ### cowsay
