@@ -9,13 +9,13 @@
 ### cowsay
     * library(cowsay)
     * say("Hello World", by="cat")
-    ![cat](https://user-images.githubusercontent.com/79886468/227890593-ae80fdae-2944-4e53-a7a5-0573abbcd34c.png)
     * say("Hello World", by="snow")
-    ![snow](https://user-images.githubusercontent.com/79886468/227890682-89d8d035-877e-407e-bda5-3fda0e020b34.png)
+   ![cat](https://user-images.githubusercontent.com/79886468/227890593-ae80fdae-2944-4e53-a7a5-0573abbcd34c.png)
+   ![snow](https://user-images.githubusercontent.com/79886468/227890682-89d8d035-877e-407e-bda5-3fda0e020b34.png)
 
 ### 도움말
     * ?sort
-    ![sort](https://user-images.githubusercontent.com/79886468/227890571-e1d8877b-3da2-4745-b000-62b98d7c1aff.png)
+   ![sort](https://user-images.githubusercontent.com/79886468/227890571-e1d8877b-3da2-4745-b000-62b98d7c1aff.png)
 
 ### 변수명 작명 규칙
     * 첫글자는 영문자나 마침표로 시작하는데 일반적으로 영문자로 시작
