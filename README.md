@@ -37,13 +37,36 @@ barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈�
 ```
 
 #### 수직방향 출력 = las
-    * 0: 축방향(기본값)
+    0: 축방향(기본값)
     1: 수평 방향(축 방향과 상관없음)
     2: 축을 기준으로 수직 방향
     3: 수직 방향(축 방향과 상관없음)
 ```R
 barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',name=c('가을','봄','여름','겨울'),las='0') // 수직방향 출력
 ```
+
+### 중첩 그룹의 막대그래프 = rbind
+```R
+age.A <- c(13709, 10974, 7979, 5050, 4250)
+age.B <- c(17540, 29701, 36209, 33947, 24487)
+age.C <- c(991, 2195, 5366, 12980, 19007)
+
+ds <- rbind(age.A,age.B,age.C)
+colnames(ds) <- c('1970','1990','2010','2030','2050')
+ds
+
+barplot(ds, main='인구측정',col = rainbow(3),beside=T, legend.text = T) // 범례
+```
+![barplot](https://user-images.githubusercontent.com/79886468/234843453-777d4bd6-886e-4d28-8d6d-ecade5a0c23c.png)
+
+#### 범례를 그래프 밖에 표시
+```R
+조건1
+par(mfrow=c(1, 1), mar=c(5, 5, 5, 7))
+조건2
+args.legend = list(x='topright',bty='n',inset=c(-0.25,0))
+```
+
 <h2>04월 13일</h2>
 * 오늘 배운 내용 정리
 
