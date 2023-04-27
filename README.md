@@ -1,4 +1,18 @@
 # 김용준 602377105
+<h2>04월 27일</h2>
+* 오늘 배운 내용 정리
+
+### barplot(막대그래프)
+```R
+favorite <- c('winter','summer','spring','summer','summer','fail','spring','summer','winter','fail')
+favorite
+table(favorite)
+ds <- table(favorite)
+ds
+barplot(ds, main = 'Favorite Season',col = '#dd77dd')
+```
+![barplot](https://user-images.githubusercontent.com/79886468/234837220-0bdec395-4c86-40b4-a7c1-e198560d9fee.png)
+
 <h2>04월 13일</h2>
 * 오늘 배운 내용 정리
 
