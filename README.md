@@ -15,25 +15,33 @@ barplot(ds, main = 'Favorite Season',col = '#dd77dd') // 막대그패프 색 지
 
 #### 막대그래프 별로 색 지정 = col
 ```R
-barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green')) // 막대그래프 별로 색 지정
+barplot(ds, main = 'Favorite Season',
+        col = c('yellow','blue','red','green')) // 막대그래프 별로 색 지정
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234840036-302e4c8e-ae8e-44f6-8a37-da4ec1d4e09c.png)
 
 #### x축 y축 이름 지정 = xlab, ylab
 ```R
-barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green'), xlab='계절', ylab='빈도수') // x축 y축 이름 지정
+barplot(ds, main = 'Favorite Season',
+        col = c('yellow','blue','red','green'), 
+        xlab='계절', ylab='빈도수') // x축 y축 이름 지정
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234839874-fdca6650-080e-47b8-ae5b-81ca5163bbf7.png)
 
 #### 수평그래프 = horiz
 ```R
-barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',horiz=TRUE) // 수평그래프
+barplot(ds, main = 'Favorite Season',
+        col = rainbow(4), xlab='계절', ylab='빈도수',
+        horiz=TRUE) // 수평그래프
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234839742-cf637ac0-d826-4ddb-aa89-042df675d04b.png)
 
 #### 그래프 이름 지정 = name
 ```R
-barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',name=c('가을','봄','여름','겨울')) // 이름 지정
+barplot(ds, main = 'Favorite Season',
+        col = rainbow(4), 
+        xlab='계절', ylab='빈도수',
+        name=c('가을','봄','여름','겨울')) // 이름 지정
 ```
 
 #### 수직방향 출력 = las
@@ -42,7 +50,11 @@ barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈�
     2: 축을 기준으로 수직 방향
     3: 수직 방향(축 방향과 상관없음)
 ```R
-barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',name=c('가을','봄','여름','겨울'),las='0') // 수직방향 출력
+barplot(ds, main = 'Favorite Season',
+        col = rainbow(4), 
+        xlab='계절', ylab='빈도수',
+        name=c('가을','봄','여름','겨울'),
+        las='0') // 수직방향 출력
 ```
 
 ### 중첩 그룹의 막대그래프 = rbind
@@ -55,18 +67,32 @@ ds <- rbind(age.A,age.B,age.C)
 colnames(ds) <- c('1970','1990','2010','2030','2050')
 ds
 
-barplot(ds, main='인구측정',col = rainbow(3),beside=T, legend.text = T) // 범례
+barplot(ds, main='인구측정',col = rainbow(3),
+        beside=T, 
+        legend.text = T) // 범례
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234843453-777d4bd6-886e-4d28-8d6d-ecade5a0c23c.png)
 
 #### 범례를 그래프 밖에 표시
 ```R
 조건1
-par(mfrow=c(1, 1), mar=c(5, 5, 5, 7))
+par(mfrow=c(1, 1), mar=c(5, 5, 5, 7)) // barplot 위에 작성
 조건2
-args.legend = list(x='topright',bty='n',inset=c(-0.25,0))
+barplot(ds, main='인구측정',col = rainbow(3),
+        beside=T, 
+        legend.text = T, 
+        args.legend = list(x='topright',bty='n',inset=c(-0.25,0)))
 ```
+    x: 범례를 출력할 기본 위치를 지정하는데, 'topright'은 그래프 출력 영역의 위쪽에서 오른쪽을 의미
+    bty: 'o'은 테두리를 표시, 'n' 테두리선을 표시X
+    inset: 범례를 x축과 y축 방향을 얼마나 이동시킬지를 지정 (-1 ~ 1 사이의 값을 지정)
 
+#### 범례의 내용 바꾸기
+```R
+       (생략..)
+       legend.text=c('0세~14세','15세~64세','65세 이상') // 범례 내용 바꾸기
+       (생략..)
+```
 <h2>04월 13일</h2>
 * 오늘 배운 내용 정리
 
