@@ -12,17 +12,18 @@ ds
 barplot(ds, main = 'Favorite Season',col = '#dd77dd') // 막대그패프 색 지정
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234837539-a6e04a14-7134-492a-b57f-b9a1772e689a.png)
+
 #### 막대그래프 별로 색 지정
 ```R
-favorite <- c('winter','summer','spring','summer','summer','fail','spring','summer','winter','fail')
-favorite
-table(favorite)
-ds <- table(favorite)
-ds
 barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green')) // 막대그래프 별로 색 지정
-
 ```
 ![barplot](https://user-images.githubusercontent.com/79886468/234838136-685ead04-86fa-40cc-8f73-8d0e4b9ae129.png)
+
+#### x축 y축 이름 지정
+```R
+barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green'), xlab='계절', ylab='빈도수') // x축 y축 이름 지정
+```
+![barplot](https://user-images.githubusercontent.com/79886468/234839071-bd1db0cc-e750-4f60-90fa-b0591eb30d74.png)
 
 
 <h2>04월 13일</h2>
