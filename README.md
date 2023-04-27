@@ -11,21 +11,39 @@ ds <- table(favorite)
 ds
 barplot(ds, main = 'Favorite Season',col = '#dd77dd') // 막대그패프 색 지정
 ```
-![barplot](https://user-images.githubusercontent.com/79886468/234837539-a6e04a14-7134-492a-b57f-b9a1772e689a.png)
+![barplot](https://user-images.githubusercontent.com/79886468/234840197-d0ab1787-4b7d-4a58-b370-32e99d7ed6a0.png)
 
-#### 막대그래프 별로 색 지정
+#### 막대그래프 별로 색 지정 = col
 ```R
 barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green')) // 막대그래프 별로 색 지정
 ```
-![barplot](https://user-images.githubusercontent.com/79886468/234838136-685ead04-86fa-40cc-8f73-8d0e4b9ae129.png)
+![barplot](https://user-images.githubusercontent.com/79886468/234840036-302e4c8e-ae8e-44f6-8a37-da4ec1d4e09c.png)
 
-#### x축 y축 이름 지정
+#### x축 y축 이름 지정 = xlab, ylab
 ```R
 barplot(ds, main = 'Favorite Season',col = c('yellow','blue','red','green'), xlab='계절', ylab='빈도수') // x축 y축 이름 지정
 ```
-![barplot](https://user-images.githubusercontent.com/79886468/234839071-bd1db0cc-e750-4f60-90fa-b0591eb30d74.png)
+![barplot](https://user-images.githubusercontent.com/79886468/234839874-fdca6650-080e-47b8-ae5b-81ca5163bbf7.png)
 
+#### 수평그래프 = horiz
+```R
+barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',horiz=TRUE) // 수평그래프
+```
+![barplot](https://user-images.githubusercontent.com/79886468/234839742-cf637ac0-d826-4ddb-aa89-042df675d04b.png)
 
+#### 그래프 이름 지정 = name
+```R
+barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',name=c('가을','봄','여름','겨울')) // 이름 지정
+```
+
+#### 수직방향 출력 = las
+    * 0: 축방향(기본값)
+    1: 수평 방향(축 방향과 상관없음)
+    2: 축을 기준으로 수직 방향
+    3: 수직 방향(축 방향과 상관없음)
+```R
+barplot(ds, main = 'Favorite Season',col = rainbow(4), xlab='계절', ylab='빈도수',name=c('가을','봄','여름','겨울'),las='0') // 수직방향 출력
+```
 <h2>04월 13일</h2>
 * 오늘 배운 내용 정리
 
