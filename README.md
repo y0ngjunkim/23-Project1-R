@@ -2,7 +2,7 @@
 <h2>04월 27일</h2>
 * 오늘 배운 내용 정리
 
-### barplot(막대그래프)
+### 막대그래프 = barplot
 ```R
 favorite <- c('winter','summer','spring','summer','summer','fail','spring','summer','winter','fail')
 favorite
@@ -93,6 +93,23 @@ barplot(ds, main='인구측정',col = rainbow(3),
        legend.text=c('0세~14세','15세~64세','65세 이상') // 범례 내용 바꾸기
        (생략..)
 ```
+
+### 히스토그램 = hist
+```R
+head(cars)
+dist <- cars[,2] // 자동차 제어거리
+dist
+hist(dist,
+     main = 'Histogram for 제동거리',
+     xlab = '제동거리',     // x축 레이블
+     ylab = '빈도수',      // y축 레이블
+     border = 'blue',   // 막대 테두리색
+     col = 'green',     // 막대 색
+     las = 2,          // x축 글씨 방향(0~3)
+     breaks = 5)        // 막대 개수 조절
+```
+![histogram](https://user-images.githubusercontent.com/79886468/234848836-77680505-afe5-47c9-99b7-912877d93bba.png)
+
 <h2>04월 13일</h2>
 * 오늘 배운 내용 정리
 
