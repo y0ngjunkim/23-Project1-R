@@ -1,4 +1,52 @@
 # 김용준 602377105
+<h2>05월 04일</h2>
+* 오늘 배운 내용 정리
+
+### 선그래프
+```R
+month =1:12
+late1 =c(3,4,5,1,5,3,7,2,89,2,32,12)
+late2 =c(3,4,3,1,5,3,7,2,8,2,12,12)
+plot (month,    # x데이터
+late1,          # y데이터
+main = 'late student',
+type='b',       # 그래프 종류 선택
+lty=1,          # 선의 종류 선택
+col='red',      # 선의 색상 선택
+xlab='MOnth',   # x축 레이블
+ylab='late cnt')# y축 레이블
+
+lines (month,   # x 데이터, line()함수는 그래프 위에 선을 겹쳐 그리는 역할을 한다
+late2,          # y데이터
+type='b',       # 선의 종류 선택
+col='blue')     # 선의 색상 선택
+```
+
+### 데이터
+```R
+# 데이터 준비
+installed.packages('carData')
+library(carData)
+room.class <-TitanicSurvival #선실 정보
+room.class
+
+# 도수 분포 계산 tbl <-table (room.class)
+tbl
+sum(tbl) #전체 탑승객수
+
+# 막대 그래프 생성
+barplot(tbl, main='선실병 탑승객',
+xlab='선실등급',
+ylab='탑승객수',
+col=c ('blue','green','yellow.))
+
+# 원그래프 작성
+tbl/sum(tbl)
+par (mar=c(1,1,4,1))
+pie(tbl,main ='선신별 탑승객',
+col=c('blue','green','yellow'))
+par(mar=c(5.1,4.1,4.1,2.1))
+```
 <h2>04월 27일</h2>
 * 오늘 배운 내용 정리
 
