@@ -15,9 +15,9 @@ plot(pressure$temperature,  # x축 데이터
 ```
 ![데이터](https://github.com/y0ngjunkim/23-Project1-R/assets/79886468/c032c6b7-f2a4-4bbb-9f70-05621f701467)
 
-### 걸축값
+### 걸측값
 ```R
-z <- c(1,2,3,NA,5,NA,7)  #걸축값이 포함한 백터
+z <- c(1,2,3,NA,5,NA,7)   # 걸측값이 포함한 백터
 sum(z)                    # 정상 계산이 되지 않음
 is.na(z)                  # NA 여부 확인
 sum(is.na(z))             # NA의 개수 확인
