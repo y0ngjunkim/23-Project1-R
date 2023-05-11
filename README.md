@@ -1,4 +1,20 @@
 # 김용준 602377105
+<h2>05월 11일</h2>
+* 오늘 배운 내용 정리
+
+### 다중변수 데이터
+```R
+head(pressure)
+
+plot(pressure$temperature,  # x축 데이터
+     pressure$pressure,     # y축 데이터
+     main = '온도와 기압',   # 그래프 제목
+     xlab = '온도(화씨)',    # x축 레이블
+     ylab = '기압'           # y축 레이블
+     )
+```
+![데이터](https://github.com/y0ngjunkim/23-Project1-R/assets/79886468/c032c6b7-f2a4-4bbb-9f70-05621f701467)
+
 <h2>05월 04일</h2>
 * 오늘 배운 내용 정리
 
