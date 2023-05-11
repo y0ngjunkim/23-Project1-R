@@ -15,6 +15,14 @@ plot(pressure$temperature,  # x축 데이터
 ```
 ![데이터](https://github.com/y0ngjunkim/23-Project1-R/assets/79886468/c032c6b7-f2a4-4bbb-9f70-05621f701467)
 
+### 걸축값
+```R
+z <- c(1,2,3,NA,5,NA,7)  #걸축값이 포함한 백터
+sum(z)                    # 정상 계산이 되지 않음
+is.na(z)                  # NA 여부 확인
+sum(is.na(z))             # NA의 개수 확인
+sum(z, na.rm = TRUE)
+```
 <h2>05월 04일</h2>
 * 오늘 배운 내용 정리
 
