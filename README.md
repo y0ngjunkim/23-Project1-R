@@ -1,4 +1,35 @@
 # 김용준 602377105
+<h2>05월 25일</h2>
+* 오늘 배운 내용 정리
+
+### 병사형 차트
+     다중 변수 데이터를 2차원 평면상에 시각화 할 수 있는 도구
+```R
+     install.packages('fmsb')
+     library(fmsb)
+
+     #데이터 준비
+     score = c(80,60,95,85,40)
+     max.score = rep(100,5)  #100을 5회 반복
+     min.score = rep(0,5)    #0을 5회 반복
+     ds = rbind(max.score,min.score, score)
+     ds = data.frame(ds) #매트릭스를 데이터프레임으로
+     colnames(ds) = c('국어','영어','수학','물리','음악')
+     ds
+
+     radarchart(ds)
+```
+### 텍스트 마이닝
+     다중 변수 데이터를 2차원 평면상에 시각화 할 수 있는 도구
+```R
+     install.packages('wordcloud')
+     library(wordcloud)
+
+     word = c("홍길동", "강감찬", "이순신", "유관순", "을지문덕")
+     frequency = c(851, 222, 431, 234, 542)
+
+     wordcloud(word, frequency, colors = rainbow(length(word)))
+```
 <h2>05월 18일</h2>
 * 오늘 배운 내용 정리
 
